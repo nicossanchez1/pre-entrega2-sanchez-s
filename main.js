@@ -84,11 +84,13 @@ NO: para finalizar`).toLowerCase();
 }
 
 if (procesoAgregado == "si") {
-  agregarP();
-  procesoAgregado = prompt(`
-desea AGREGAR o continuar agregando algun producto al stock?
-SI: para iniciar o continuar el proceso de stock.
-NO: para finalizar`).toLowerCase();
+  while (procesoAgregado != "no") {
+    agregarP();
+    procesoAgregado = prompt(`
+  desea AGREGAR algun producto al stock?
+  SI: para iniciar o continuar el proceso de stock.
+  NO: para finalizar`).toLowerCase();
+  }
 } else if (procesoAgregado == "no") {
   alert("HA FINALIZADO EL PROCESO DE AGREGADO DE STOCK");
 }
@@ -120,5 +122,7 @@ if (decisionFiltrar == "si") {
   alert(productosTotal);
   filtrar();
 } else if (decisionFiltrar == "no") {
-  alert("EL PROCESO DE COMPRA HA FINALIZADO");
+  alert("PROCESO FINALIZADO");
 }
+
+// 
